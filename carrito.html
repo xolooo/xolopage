@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script>
+        window.onload = function () {
+          // Variables
+          const baseDeDatos = [
+              {
+                  id: 1,
+                  nombre: 'Playera',
+                  precio: 100,
+                  imagen: '14.jpg'
+              },
+              {
+                  id: 2,
+                  nombre: 'Camisa',
+                  precio: 250,
+                  imagen: '16.jpg'
+              },
+              {
+                  id: 3,
+                  nombre: 'Falda Negra',
+                  precio: 100,
+                  imagen: 'F.10.jpg'
+              },
+              {
+                  id: 4,
+                  nombre: 'Falda Negra Pegada',
+                  precio: 150,
+                  imagen: 'F.11.jpg'
+              },
+              {
+                  id: 5,
+                  nombre: 'Falda Terciopelo Azul',
+                  precio: 60,
+                  imagen: 'F.12.jpg'
+              },
+              {
+                  id: 6,
+                  nombre: 'Conjunto',
+                  precio: 300,
+                  imagen: 'F.19.png'
+              },
+              {
+                  id: 7,
+                  nombre: 'Mini Falda Cafe',
+                  precio: 60,
+                  imagen: 'F.30.jpg'
+              },
+              {
+                  id: 8,
+                  nombre: 'Falda Cafe',
+                  precio: 150,
+                  imagen: 'F.9.jpg'
+              },
+              {
+                  id: 9,
+                  nombre: 'Vestido rosa palo',
+                  precio: 200,
+                  imagen: 'V.14.jpg'
+              },
+              {
+                  id: 10,
+                  nombre: 'Vestido Negra ',
+                  precio: 150,
+                  imagen: 'V.15.jpg'
+              },
+              {
+                  id: 11,
+                  nombre: 'Vestido Negro con mangas',
+                  precio: 100,
+                  imagen: 'V.8.jpg'
+              },
+              {
+                  id: 12,
+                  nombre: 'Vestido de cuadros',
+                  precio: 100,
+                  imagen: 'V.9.jpg'
+              },
+              {
+                  id: 13,
+                  nombre: 'Blusa Primavera',
+                  precio: 100,
+                  imagen: 'blusa12.jpg'
+              },
+              {
+                  id: 14,
+                  nombre: 'Camisa de color arcoiris',
+                  precio: 150,
+                  imagen: 'blusa13.jpg'
+              },
+              {
+                  id: 15,
+                  nombre: 'Conjunto',
+                  precio: 200,
+                  imagen: 'blusa16.jpg'
+              },
+              {
+                  id: 16,
+                  nombre: 'Conjunto Primavera',
+                  precio: 250,
+                  imagen: 'blusa19.jpg'
+              },
+              {
+                  id: 17,
+                  nombre: 'Camisa primavera',
+                  precio: 60,
+                  imagen: 'blusa20.jpg'
+              },
+              {
+                  id: 18,
+                  nombre: 'Camisa juvenil',
+                  precio: 100,
+                  imagen: 'camisa53.jpg'
+              },
+              {
+                  id: 19,
+                  nombre: 'Camisa primavera',
+                  precio: 120,
+                  imagen: 'camisa55.png'
+              },
+              {
+                  id: 20,
+                  nombre: 'Calcetines arcoiris',
+                  precio: 100,
+                  imagen: 'Z1.jpeg'
+              },
+              {
+                  id: 21,
+                  nombre: 'Calcetines de estampado',
+                  precio: 30,
+                  imagen: 'Z2.jpeg'
+              },
+              {
+                  id: 22,
+                  nombre: 'Calcetines de estapado',
+                  precio: 30,
+                  imagen: 'Z3.jpeg'
+              },
+              {
+                  id: 23,
+                  nombre: 'Calcetines de bob esponja',
+                  precio: 90,
+                  imagen: 'Z4.jpeg'
+              },
+              {
+                  id: 24,
+                  nombre: 'Calcetines arcoiris',
+                  precio: 50,
+                  imagen: 'cal.1.jpeg'
+              },
+              {
+                  id: 25,
+                  nombre: 'Calcetines de mini',
+                  precio: 60,
+                  imagen: 'mini.jpeg'
+              },
+              {
+                  id: 26,
+                  nombre: 'Calcetines de universo',
+                  precio: 50,
+                  imagen: 'images (7).jpeg'
+              },
+              {
+                  id: 27,
+                  nombre: 'Calcetines ',
+                  precio: 60,
+                  imagen: 'images (9).jpeg'
+              },{
+                  id: 28,
+                  nombre: 'Pantalon mesclilla',
+                  precio: 100,
+                  imagen: 'pantalon 1.gif'
+              },
+              {
+                  id: 29,
+                  nombre: 'Pantalon mesclilla',
+                  precio: 100,
+                  imagen: 'pantalon 2.jpg'
+              },
+              {
+                  id: 30,
+                  nombre: 'Pantalon',
+                  precio: 150,
+                  imagen: 'pantalon 3.jpg'
+              },
+              {
+                  id: 31,
+                  nombre: 'Pantalon de mesclilla',
+                  precio: 90,
+                  imagen: 'pantalon 4.jpg'
+              },
+              {
+                  id: 32,
+                  nombre: 'Pantalon de tela',
+                  precio: 110,
+                  imagen: 'pantalon 5.jpg'
+              },
+              {
+                  id: 33,
+                  nombre: 'Pantalon tiro alto',
+                  precio: 150,
+                  imagen: 'pantalon 6.jpg'
+              },
+              {
+                  id: 34,
+                  nombre: 'Pantalon caronil beis',
+                  precio: 100,
+                  imagen: 'pantalon 7.jpg'
+              },
+              {
+                  id: 35,
+                  nombre: 'Pantalon unisex',
+                  precio: 250,
+                  imagen: 'pantalon 8.jpg'
+              },
+              {
+                  id: 36,
+                  nombre: 'Pantalon tela  ',
+                  precio: 90,
+                  imagen: 'pantalon 9.jpg'
+              },
+              {
+                  id: 37,
+                  nombre: 'Short corto',
+                  precio: 100,
+                  imagen: 'short 1.jpg'
+              },
+              {
+                  id: 38,
+                  nombre: 'Short corto de tela',
+                  precio: 150,
+                  imagen: 'short 2.jpg'
+              },
+              {
+                  id: 39,
+                  nombre: 'Short corto de tela',
+                  precio: 100,
+                  imagen: 'short 3.jpg'
+              },
+              {
+                  id: 40,
+                  nombre: 'Short corto varonil',
+                  precio: 250,
+                  imagen: 'short 4.jpg'
+              }
+
+
+
+
+                            
+              
+
+          ];
+
+          let carrito = [];
+          let total = 0;
+          const DOMitems = document.querySelector('#items');
+          const DOMcarrito = document.querySelector('#carrito');
+          const DOMtotal = document.querySelector('#total');
+          const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+
+          // Funciones
+
+          /**
+          * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
+          */
+          function renderizarProductos() {
+              baseDeDatos.forEach((info) => {
+                  // Estructura
+                  const miNodo = document.createElement('div');
+                  miNodo.classList.add('card', 'col-sm-4');
+                  // Body
+                  const miNodoCardBody = document.createElement('div');
+                  miNodoCardBody.classList.add('card-body');
+                  // Titulo
+                  const miNodoTitle = document.createElement('h5');
+                  miNodoTitle.classList.add('card-title');
+                  miNodoTitle.textContent = info.nombre;
+                  // Imagen
+                  const miNodoImagen = document.createElement('img');
+                  miNodoImagen.classList.add('img-fluid');
+                  miNodoImagen.setAttribute('src', info.imagen);
+                  // Precio
+                  const miNodoPrecio = document.createElement('p');
+                  miNodoPrecio.classList.add('card-text');
+                  miNodoPrecio.textContent = info.precio + '$';
+                  // Boton 
+                  const miNodoBoton = document.createElement('button');
+                  miNodoBoton.classList.add('btn', 'btn-primary');
+                  miNodoBoton.textContent = '+';
+                  miNodoBoton.setAttribute('marcador', info.id);
+                  miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+                  // Insertamos
+                  miNodoCardBody.appendChild(miNodoImagen);
+                  miNodoCardBody.appendChild(miNodoTitle);
+                  miNodoCardBody.appendChild(miNodoPrecio);
+                  miNodoCardBody.appendChild(miNodoBoton);
+                  miNodo.appendChild(miNodoCardBody);
+                  DOMitems.appendChild(miNodo);
+              });
+          }
+
+          /**
+          * Evento para añadir un producto al carrito de la compra
+          */
+          function anyadirProductoAlCarrito(evento) {
+              // Anyadimos el Nodo a nuestro carrito
+              carrito.push(evento.target.getAttribute('marcador'))
+              // Calculo el total
+              calcularTotal();
+              // Actualizamos el carrito 
+              renderizarCarrito();
+
+          }
+
+          /**
+          * Dibuja todos los productos guardados en el carrito
+          */
+          function renderizarCarrito() {
+              // Vaciamos todo el html
+              DOMcarrito.textContent = '';
+              // Quitamos los duplicados
+              const carritoSinDuplicados = [...new Set(carrito)];
+              // Generamos los Nodos a partir de carrito
+              carritoSinDuplicados.forEach((item) => {
+                  // Obtenemos el item que necesitamos de la variable base de datos
+                  const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                      // ¿Coincide las id? Solo puede existir un caso
+                      return itemBaseDatos.id === parseInt(item);
+                  });
+                  // Cuenta el número de veces que se repite el producto
+                  const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+                      // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+                      return itemId === item ? total += 1 : total;
+                  }, 0);
+                  // Creamos el nodo del item del carrito
+                  const miNodo = document.createElement('li');
+                  miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+                  miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}$`;
+                  // Boton de borrar
+                  const miBoton = document.createElement('button');
+                  miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                  miBoton.textContent = 'X';
+                  miBoton.style.marginLeft = '1rem';
+                  miBoton.dataset.item = item;
+                  miBoton.addEventListener('click', borrarItemCarrito);
+                  // Mezclamos nodos
+                  miNodo.appendChild(miBoton);
+                  DOMcarrito.appendChild(miNodo);
+              });
+          }
+
+          /**
+          * Evento para borrar un elemento del carrito
+          */
+          function borrarItemCarrito(evento) {
+              // Obtenemos el producto ID que hay en el boton pulsado
+              const id = evento.target.dataset.item;
+              // Borramos todos los productos
+              carrito = carrito.filter((carritoId) => {
+                  return carritoId !== id;
+              });
+              // volvemos a renderizar
+              renderizarCarrito();
+              // Calculamos de nuevo el precio
+              calcularTotal();
+          }
+
+          /**
+          * Calcula el precio total teniendo en cuenta los productos repetidos
+          */
+          function calcularTotal() {
+              // Limpiamos precio anterior
+              total = 0;
+              // Recorremos el array del carrito
+              carrito.forEach((item) => {
+                  // De cada elemento obtenemos su precio
+                  const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                      return itemBaseDatos.id === parseInt(item);
+                  });
+                  total = total + miItem[0].precio;
+              });
+              // Renderizamos el precio en el HTML
+              DOMtotal.textContent = total.toFixed(2);
+          }
+
+          /**
+          * Varia el carrito y vuelve a dibujarlo
+          */
+          function vaciarCarrito() {
+              // Limpiamos los productos guardados
+              carrito = [];
+              // Renderizamos los cambios
+              renderizarCarrito();
+              calcularTotal();
+          }
+
+          // Eventos
+          DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+          // Inicio
+          renderizarProductos();
+
+
+        } 
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-8 row"></main>
+            <!-- Carrito -->
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span>$</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
